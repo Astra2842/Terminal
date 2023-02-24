@@ -1,0 +1,45 @@
+1. Посмотреть где я - pwd
+2. Создать папку - mkdir test_folder
+3. Зайти в папку - cd test_folder
+4. Создать три папки - mkdir test_1 test_2 test_3
+5. Зайти в любую папку - cd test_1
+6. Создать 5 файлов (3 txt 1 json) - touch file1.txt file2.txt file3.txt file4.json file5.json
+7. Создать 3 папки - mkdir cat dog hamster
+8. Вывести список содержимого папки - ls -la
+9. Открыть любой txt файл - cat file1.txt 
+10. Написать туда любой текст - cat >> file1.txt 111 222 333 
+or vim file4.json 
+11. сохранить и выйти - через cat - ctrl+c
+или через vim esc, shift+:wq+enter
+12. выйти из папки на уровень выше - cd ..
+
+
+
+13. Переместить любые два созданных файла в любую другую папку - dir test_1: mv file1.txt cat/file1.txt
+and mv file4.json dog/file4.json
+14. Скопировать любые два файла в любую другую папку - dir test_1 cp file2.txt hamster/file2.txt
+and cp file5.json hamster/file5.json
+15. Найти файл по имени - find . -name "file1.txt" 
+или find . -name "file*" - все файла с "file" в названии
+16. просмотреть содержимое в реальном времени - ? 
+17. Вывести нескольк первых строк из текстового файла - head bugaga.txt
+18. Вывести несколько последних строк из текстового файла - tail bugaga.txt
+19. Просмотреть содержимое длинного файла - dir test_folder less bugaga.txt
+20. Вывести дату и время - date
+
+
+Задание *
+1. Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request - 
+curl http://162.55.220.72:5005
+
+2. Написать скрипт, который выполнит автоматически пункты 3,4,5,6,7,8,13 - 
+
+#!/bin/bash
+cd test_folder
+mkdir script_1 script_2 script_3
+cd script_1
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir cat dog hamster
+ls -la
+mv file1.txt cat/file1.txt
+mv file4.json dog/file4.json
